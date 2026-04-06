@@ -243,3 +243,27 @@ iframe {
   text-decoration: underline;
   color: #0077ed;
 }
+
+/* --- 20. MOBILE RESPONSIVENESS --- */
+@media (max-width: 768px) {
+  /* Shrinks the gap between menu links so they fit on screen */
+  .apple-nav ul {
+    gap: 15px; 
+    flex-wrap: wrap; /* Allows the menu to drop to a second line if the phone is very narrow */
+  }
+
+  /* Shrinks the massive title to fit a phone screen */
+  .hero-section h1 {
+    font-size: 36px; 
+  }
+
+  /* Shrinks the subtitle */
+  .hero-section h2 {
+    font-size: 20px;
+  }
+
+  /* Pushes the hero text up slightly so it isn't hidden behind the menu */
+  .hero-section {
+    padding-top: 100px; 
+  }
+}

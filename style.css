@@ -1,0 +1,121 @@
+/* 1. The Modern Reset */
+body {
+  margin: 0;
+  /* This tells the website to use the sleekest font available on the user's device (like Apple's San Francisco) */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #fbfbfd; /* Apple's signature soft, clean background color */
+  color: #1d1d1f; /* Apple uses a very dark gray instead of harsh black */
+}
+
+/* 2. The Frosted Glass Navigation Bar */
+.apple-nav {
+  background-color: rgba(255, 255, 255, 0.8); /* Slightly see-through white */
+  backdrop-filter: blur(10px); /* This creates the famous frosted glass blur effect! */
+  position: fixed; /* This glues the menu to the top of the screen */
+  top: 0;
+  width: 100%;
+  padding: 15px 0;
+  border-bottom: 1px solid #d2d2d7;
+  display: flex;
+  justify-content: center; /* Puts the menu perfectly in the middle */
+}
+
+/* 3. Spacing the Menu Links */
+.apple-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 40px; /* Big, clean spaces between the links */
+}
+
+/* 4. Styling the Menu Links */
+.apple-nav a {
+  text-decoration: none;
+  color: #1d1d1f;
+  font-size: 14px;
+  opacity: 0.8;
+  transition: opacity 0.3s ease; /* Makes hovering smooth */
+}
+
+.apple-nav a:hover {
+  opacity: 1;
+  color: #0066cc; /* Apple's classic blue link color */
+}
+
+/* 5. The Big Welcome Area (Hero Section) */
+.hero-section {
+  padding-top: 180px; /* Pushes the text down below our fixed menu */
+  text-align: center;
+}
+
+.hero-section h1 {
+  font-size: 56px;
+  font-weight: 600;
+  letter-spacing: -0.01em; /* Pulls the letters slightly closer together for a modern look */
+  margin: 0 0 10px 0;
+}
+
+.hero-section h2 {
+  font-size: 28px;
+  font-weight: 400;
+  color: #86868b; /* Apple's soft gray secondary text */
+  margin: 0 0 40px 0;
+}
+
+/* 6. The Modern Pill Button */
+.hero-button {
+  display: inline-block;
+  background-color: #0071e3; /* Apple Blue */
+  color: white;
+  padding: 14px 24px;
+  border-radius: 980px; /* Creates that perfect pill shape */
+  text-decoration: none;
+  font-size: 17px;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #0077ed; /* Gets slightly brighter when you hover over it */
+}
+/* --- NEW STYLES FOR THE EVENTS PAGE --- */
+
+/* 7. Spaces out the top title so it isn't hidden by the menu */
+.page-header {
+  padding-top: 120px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.page-header h1 {
+  font-size: 42px;
+  color: #1d1d1f;
+}
+
+/* 8. Keeps the content neatly in the middle of the screen */
+.content-section {
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  text-align: center;
+}
+
+/* 9. Makes a beautiful, modern white card with soft shadows for the events */
+.event-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 18px; /* Apple's soft curved corners */
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* A very soft, elegant shadow */
+  text-align: left; /* Makes the event details easy to read */
+}
+
+.event-card h3 {
+  margin-top: 0;
+  color: #0071e3; /* Apple Blue for the event title */
+}
+
+/* 10. Makes the YouTube video fit nicely and gives it curved corners */
+iframe {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}

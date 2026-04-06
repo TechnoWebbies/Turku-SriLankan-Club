@@ -284,4 +284,11 @@ iframe {
     flex-shrink: 0; /* Stops the browser from squishing the cards */
     margin-right: 15px; /* Adds a little gap between the sliding cards */
   }
+  
+  /* 3. The Ghost Block to fix the last card centering */
+  .grid-section::after {
+    content: "";
+    min-width: 20px; /* Creates an invisible 20-pixel block at the end of the track */
+    display: block;
+  }
 }

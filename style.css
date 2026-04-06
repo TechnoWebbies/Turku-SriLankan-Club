@@ -202,3 +202,33 @@ iframe {
 .sponsor-link:hover {
   text-decoration: underline;
 }
+/* --- 18. THE PROFESSIONAL FOOTER --- */
+.site-footer {
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 60px; /* Pushes the footer down away from the main content */
+  border-top: 1px solid #d2d2d7; /* A subtle gray line to separate the footer */
+  color: #86868b; /* Apple's soft secondary gray text */
+  font-size: 14px;
+}
+
+.site-footer p {
+  margin: 5px 0;
+}
+
+/* 19. Styling Your Business Name */
+.developer-credit {
+  font-size: 13px;
+}
+
+.techno-link {
+  color: #0071e3; /* Apple Blue */
+  text-decoration: none;
+  font-weight: 600; /* Makes your business name stand out slightly */
+  transition: color 0.3s ease;
+}
+
+.techno-link:hover {
+  text-decoration: underline;
+  color: #0077ed;
+}

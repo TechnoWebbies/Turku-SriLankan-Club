@@ -1,10 +1,14 @@
 /* 1. The Modern Reset */
 body {
   margin: 0;
-  /* This tells the website to use the sleekest font available on the user's device (like Apple's San Francisco) */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-  background-color: #fbfbfd; /* Apple's signature soft, clean background color */
-  color: #1d1d1f; /* Apple uses a very dark gray instead of harsh black */
+  background-color: #fbfbfd; 
+  color: #1d1d1f; 
+  
+  /* NEW: The Flexbox Spring Magic */
+  min-height: 100vh; /* Makes the body exactly the height of your screen */
+  display: flex;
+  flex-direction: column; /* Stacks the menu, hero, and footer vertically */
 }
 
 /* 2. The Frosted Glass Navigation Bar */
@@ -45,8 +49,13 @@ body {
 
 /* 5. The Big Welcome Area (Hero Section) */
 .hero-section {
-  padding-top: 180px; /* Pushes the text down below our fixed menu */
+  flex-grow: 1; /* This is the special spring that stretches and fills all empty space! */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centers the text vertically */
+  align-items: center; /* Centers the text horizontally */
   text-align: center;
+  padding: 0 20px; /* Keeps text from touching the edges on small mobile phones */
 }
 
 .hero-section h1 {
@@ -202,14 +211,16 @@ iframe {
 .sponsor-link:hover {
   text-decoration: underline;
 }
+
 /* --- 18. THE PROFESSIONAL FOOTER --- */
 .site-footer {
   text-align: center;
-  padding: 40px 20px;
-  margin-top: 60px; /* Pushes the footer down away from the main content */
-  border-top: 1px solid #d2d2d7; /* A subtle gray line to separate the footer */
-  color: #86868b; /* Apple's soft secondary gray text */
+  padding: 30px 20px;
+  /* We removed the margin-top because Flexbox now pushes it to the bottom automatically */
+  border-top: 1px solid #d2d2d7; 
+  color: #86868b; 
   font-size: 14px;
+  background-color: #fbfbfd;
 }
 
 .site-footer p {

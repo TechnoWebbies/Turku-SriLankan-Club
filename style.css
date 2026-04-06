@@ -1,4 +1,14 @@
 /* 1. The Modern Reset */
+/* --- THE MASTER RESET (Fixes the mobile wobble) --- */
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden; /* Physically locks the page from sliding sideways */
+  width: 100%;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
@@ -246,24 +256,32 @@ iframe {
 
 /* --- 20. MOBILE RESPONSIVENESS --- */
 @media (max-width: 768px) {
-  /* Shrinks the gap between menu links so they fit on screen */
-  .apple-nav ul {
-    gap: 15px; 
-    flex-wrap: wrap; /* Allows the menu to drop to a second line if the phone is very narrow */
+  
+  /* ... (Keep your existing mobile menu and hero text rules here) ... */
+
+  /* 1. Turn the Grid into a Horizontal Swipe Track */
+  .grid-section {
+    display: flex; /* Changes from a grid to a flexible row */
+    overflow-x: auto; /* Turns on horizontal scrolling */
+    scroll-snap-type: x mandatory; /* The magic snapping feature! */
+    padding-bottom: 20px; /* Gives a little room at the bottom */
+    
+    /* This makes swiping feel buttery smooth on iPhones */
+    -webkit-overflow-scrolling: touch; 
+    
+    /* Hides the ugly default scrollbar for a cleaner app look */
+    scrollbar-width: none; 
   }
 
-  /* Shrinks the massive title to fit a phone screen */
-  .hero-section h1 {
-    font-size: 36px; 
+  .grid-section::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar on Chrome/Safari */
   }
 
-  /* Shrinks the subtitle */
-  .hero-section h2 {
-    font-size: 20px;
-  }
-
-  /* Pushes the hero text up slightly so it isn't hidden behind the menu */
-  .hero-section {
-    padding-top: 100px; 
+  /* 2. Format the Cards for the Slider */
+  .person-card, .sponsor-card {
+    min-width: 85%; /* Each card takes up 85% of the screen */
+    scroll-snap-align: center; /* Snaps the card exactly to the middle */
+    flex-shrink: 0; /* Stops the browser from squishing the cards */
+    margin-right: 15px; /* Adds a little gap between the sliding cards */
   }
 }
